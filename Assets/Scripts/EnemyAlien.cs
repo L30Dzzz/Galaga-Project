@@ -29,13 +29,13 @@ public class EnemyAlien : MonoBehaviour
             return;
         }
 
-        timer -= Time.deltaTime;
+        //timer -= Time.deltaTime;
 
-        if (timer < 0)
-        {
-            direction = -direction;
-            timer = changeTime;
-        }
+        // if (timer < 0)
+        // {
+        //     direction = -direction;
+        //     timer = changeTime;
+        // }
     }
     
     // Update is called once per frame
@@ -69,7 +69,8 @@ public class EnemyAlien : MonoBehaviour
         if (player != null)
         {
             player.ChangeHealth(-1);
-            }
+        }
+        direction = -direction;
     }
 
     //Public because we want to call it from elsewhere like the projectile script
