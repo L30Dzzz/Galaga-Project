@@ -48,4 +48,12 @@ public class PlayerShip : MonoBehaviour
         
         rigidbody2d.MovePosition(position);
     }
+
+    public void ChangeHealth(int amount)
+    {
+        if (amount < 0)
+        
+        currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
+        Debug.Log(currentHealth + "/" + maxHealth);
+    }
 }

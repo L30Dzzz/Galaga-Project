@@ -26,7 +26,7 @@ public class Bullet : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D other)
     {
-        EnemyController e = other.collider.GetComponent<EnemyController>();
+        EnemyAlien e = other.collider.GetComponent<EnemyAlien>();
         if (e != null)
         {
             e.Fix();
