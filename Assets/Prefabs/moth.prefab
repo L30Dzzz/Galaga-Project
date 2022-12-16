@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 7810641263123773125}
   - component: {fileID: 9129030606992670885}
   - component: {fileID: -1140849613653818236}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: moth
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -146,4 +146,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 3
   vertical: 0
-  changeTime: 3
+  projectilePrefab: {fileID: 1153912870116799290, guid: d5ec60b95df3d41fdb12aa67f0926472, type: 3}

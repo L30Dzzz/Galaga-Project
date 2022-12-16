@@ -38,6 +38,11 @@ public class PlayerShip : MonoBehaviour
         vertical = Input.GetAxis("Vertical");
 
         Vector2 move = new Vector2(horizontal, vertical);
+
+        if(Input.GetKeyDown(KeyCode.C))
+        {
+        Launch();
+        }
     }
 
     void FixedUpdate()
@@ -55,5 +60,13 @@ public class PlayerShip : MonoBehaviour
         
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+    }
+
+    void Launch()
+    {
+        GameObject projectileObject = Instantiate(projectilePrefab, rigidbody2d.position + Vector2.up * 0.5f, Quaternion.identity);
+
+        Bullet projectile = projectileObject.GetComponent<Bullet>();
+        projectile.Launch(new Vector2(0,1), 500);
     }
 }
