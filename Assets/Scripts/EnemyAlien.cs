@@ -11,16 +11,27 @@ public class EnemyAlien : MonoBehaviour
     int direction = 1;
     public GameObject projectilePrefab;
 
+    float shotTime;
+    float resetShot = 3;
+
     
     // Start is called before the first frame update
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
+        shotTime = resetShot;
     }
 
     void Update()
     {
-        Launch();
+        shotTime -= Time.deltaTime;
+
+        if(shotTime < 0)
+        {
+            Launch();
+            shotTime = resetShot;
+        }
+        // 
     }
     
     // Update is called once per frame
