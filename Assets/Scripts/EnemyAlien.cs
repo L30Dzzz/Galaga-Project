@@ -12,7 +12,7 @@ public class EnemyAlien : MonoBehaviour
     public GameObject projectilePrefab;
 
     float shotTime;
-    float resetShot = 3;
+    float resetShot = 1;
 
     
     // Start is called before the first frame update
